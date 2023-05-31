@@ -1,9 +1,46 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+ 
+    
+  <title>QR Code Example</title>
+</head>
+<body>
+  <img src=https://api.qrserver.com/v1/create-qr-code/?data=I love you avanthika &amp;size=200x200" alt="QR Code">
+</body>
+</html> -->
 <!DOCTYPE html>
 <html>
 <head>
   <title>QR Code Example</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <script>
+    // Function to update the QR code with the provided text
+    function updateQRCode() {
+      var text = document.getElementById("inputText").value;
+      var qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(text) + "&size=200x200";
+      document.getElementById("qrCodeImage").src = qrCodeUrl;
+    }
+  </script>
 </head>
 <body>
-  <img src="https://api.qrserver.com/v1/create-qr-code/?data=please don't leave me  &amp;size=200x200" alt="QR Code">
+  <input type="text" id="inputText" placeholder="Enter text for QR code">
+  <button onclick="updateQRCode()">Generate QR Code</button>
+  <br>
+  <img id="qrCodeImage" src="https://api.qrserver.com/v1/create-qr-code/?data=Hello%20World&size=200x200" alt="QR Code">
 </body>
 </html>
+
