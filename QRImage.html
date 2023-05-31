@@ -1,25 +1,33 @@
-<!--<!DOCTYPE html>
-<html>
-<head>
- 
-    
-  <title>QR Code Example</title>
-</head>
-<body>
-  <img src=https://api.qrserver.com/v1/create-qr-code/?data=I love you avanthika &amp;size=200x200" alt="QR Code">
-</body>
-</html> -->
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>QR Code Example</title>
+  <title>QR Code Image generator</title>
   <style>
     body {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
       height: 100vh;
       margin: 0;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      margin-top: 2%;
+      
+    }
+
+    .qr-code-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10%;
     }
 
     img {
@@ -37,10 +45,13 @@
   </script>
 </head>
 <body>
-  <input type="text" id="inputText" placeholder="Enter text for QR code">
-  <button onclick="updateQRCode()">Generate QR Code</button>
-  <br>
-  <img id="qrCodeImage" src="https://api.qrserver.com/v1/create-qr-code/?data=Hello%20World&size=200x200" alt="QR Code">
+  <div class="content">
+    <input type="text" id="inputText" placeholder="Enter text for QR code"><br><br>
+    <button onclick="updateQRCode()">Generate QR Code</button>
+  </div>
+  <div class="qr-code-container">
+    <img id="qrCodeImage" src="https://api.qrserver.com/v1/create-qr-code/?data=Enter the text you want to change &size=200x200" alt="QR Code">
+  </div>
 </body>
 </html>
 
