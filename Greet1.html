@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-  
-   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       background-color: black;
@@ -40,24 +39,25 @@
     }
 
     .card-text {
-      flex: 0 0 55%; /* Adjust the width of the text frame */
-      padding-left: 20px; /* Add some space between the image and text */
+      flex: 0 0 60%; /* Adjust the width of the text frame */
+      padding: 8px; /* Add some space within the text frame */
     }
 
     .card p {
       font-size: 18px;
       line-height: 1.5;
-      color:black;
-     animation: color-animation 5s;  
-      
-      
+      color: black;
+      animation: color-animation 5s;
+      overflow-wrap: break-word; /* Wrap the text within the frame */
+      max-height: calc(100vh - 90px); /* Limit the max height of the text to fit within the viewport */
+      overflow-y: auto; /* Add scroll if the text exceeds the max height */
     }
-       
- @keyframes color-animation {
-    0% { background-color:aqua; } 
-    50% { background-color:azure; } 
-    100% { background-color:burlywood; } 
-  }  
+
+    @keyframes color-animation {
+      0% { background-color: aqua; }
+      50% { background-color: azure; }
+      100% { background-color: burlywood; }
+    }
 
     .card b {
       color: #ff5b5b;
@@ -67,18 +67,13 @@
     .signature {
       margin-top: 20px;
       font-size: 16px;
-      color:black;
+      color: black;
     }
-    p:hover{
-        background-color:navajowhite;
-        font-size: large;
-        
+
+    p:hover {
+      background-color: navajowhite;
+      font-size: large;
     }
-    
-
- 
-</style>
-
   </style>
 </head>
 <body>
@@ -89,10 +84,11 @@
     <div class="card-text">
       <p><b>Happy Birthday! Avanthi</b></p>
       <p>On this special day, I want to shower you with love and make your birthday unforgettable. You're not just my Lover, you are my everything. Your presence in my life brings joy, laughter, and endless happiness.
-      As we celebrate your birthday, let's create new memories together and cherish the moments we've shared. You deserve all the happiness in the world, and I promise to make every day as special as today.
-      You have an amazing spirit that brightens up the lives of everyone around you. Your kind heart, beautiful smile, and unwavering support make me feel truly blessed. Thank you for being by my side through thick and thin.
-      May this day bring you countless smiles, warm hugs, and delightful surprises. I am grateful to have you in my life, and I look forward to celebrating many more birthdays with you......<br>Love you forever and ever</p>
+        As we celebrate your birthday, let's create new memories together and cherish the moments we've shared. You deserve all the happiness in the world, and I promise to make every day as special as today.
+        You have an amazing spirit that brightens up the lives of everyone around you. Your kind heart, beautiful smile, and unwavering support make me feel truly blessed. Thank you for being by my side through thick and thin.
+        May this day bring you countless smiles, warm hugs, and delightful surprises. I am grateful to have you in my life, and I look forward to celebrating many more birthdays with you......<br>Love you forever and ever</p>
     </div>
-</di>
+  </div>
 </body>
 </html>
+
